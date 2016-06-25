@@ -1,8 +1,60 @@
 <div class="container page_border"> 
     <div class="panel panel-default">
-      <div class="panel-heading"><%= @post.title %></div>
+      <div class="panel-heading">
+          <h3 class="panel-title"><%= @post.title %></h3>
+      </div>
       <div class="panel-body panel-content">
           <%= @post.content.gsub(/\r\n/, '<br/>').html_safe %>
       </div>
     </div>
+    
+    <ul class="list-group">
+      <li class="list-group-item">
+        <div class="input-group">
+          <input type="text" class="form-control reply-content" placeholder="댓글을 작성해주세요">
+          <span class="input-group-btn">
+            <button id="reply-button" class="btn btn-default" type="button">작성</button>
+          </span>
+        </div>
+      </li>
+      <div class="reply-list">
+        <% @comments.each do |comment| %> 
+        <li class="list-group-item reply-container">
+          <div class="reply-user">user</div>
+          <div class="reply-date"><%= comment.created_at %></div>
+          <div class="reply-content">
+            <span>"</span>
+            <%= comment.content %>
+            <span>"</span>
+          </div>
+        </li>
+        <% end %>        
+      </div>
+    </ul>   
 </div>
+
+<script>
+$(function(){
+  $("#reply-button").click(function(){
+    $.ajax({
+      method: "POST",
+      url: "/write_reply",
+      data: { post_id: <%=@post.id %>,
+              content: $(".reply-content").val()},
+      success: function(data){
+        $(".reply-list").prepend(
+          "<li class='list-group-item reply-container'>" +
+            "<div class='reply-user'>user</div>" + 
+            "<div class='reply-date'>"+ data.reply.created_at+"</div>" +
+            "<div class='reply-content'>" +
+              "<span> &quot; </span>" +
+              data.reply.content +
+              "<span> &quot; </span>" +
+            "</div>" +
+          "</li>")
+      }
+    });    
+  });  
+});
+
+</script>

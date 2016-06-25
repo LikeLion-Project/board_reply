@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'home/write_post'
   get 'home/post/:id' => 'home#detail_post'
   post 'home/write'
+  
+  post 'write_reply' => 'home#write_reply'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
