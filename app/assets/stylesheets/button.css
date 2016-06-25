@@ -1,0 +1,50 @@
+a.stumble-big{
+    bottom:24px;
+    right:24px;
+	position: absolute;	
+    text-decoration: none;
+    display: block;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+
+	font-size:16px;
+    padding:10px 15px 10px 15px;
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	transform: translate(0, 0);
+
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;    
+    
+    -webkit-box-shadow: 0px 6px 0px #346068;
+    -moz-box-shadow: 0px 6px 0px #346068;
+    box-shadow: 0px 6px 0px #346068;
+    color: #ffffff;
+    margin-top: 20px;
+    background:#007784;
+}
+    
+a.stumble-big:active{ 
+    -webkit-box-shadow: 0px 3px 0px #346068;
+    -moz-box-shadow: 0px 3px 0px #346068;
+    box-shadow: 0px 3px 0px #346068;
+    -webkit-transform: translate(0, 3px);
+	-moz-transform: translate(0, 3px);
+	transform: translate(0, 3px);
+}
+/*a.stumble-big:before{*/
+/*    background: url("images/stumble.png") no-repeat center center;*/
+/*    content:"";*/
+/*    width:30px;*/
+/*    height:30px;*/
+/*    position:absolute;*/
+/*    left:10px;*/
+/*    top:18%;*/
+/*}*/
+
+
+
