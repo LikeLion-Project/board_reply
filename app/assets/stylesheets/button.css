@@ -1,4 +1,6 @@
-a.stumble-big{
+.stumble-big{
+    border: none;
+    outline:none;    
     bottom:24px;
     right:24px;
 	position: absolute;	
@@ -27,8 +29,15 @@ a.stumble-big{
     margin-top: 20px;
     background:#007784;
 }
-    
-a.stumble-big:active{ 
+
+.stumble-big:hover, .stumble-big:visited, .stumble-big:link{
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.stumble-big:active{ 
+    color:#ffffff;
+    text-decoration: none;
     -webkit-box-shadow: 0px 3px 0px #346068;
     -moz-box-shadow: 0px 3px 0px #346068;
     box-shadow: 0px 3px 0px #346068;
