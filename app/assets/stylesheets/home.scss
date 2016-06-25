@@ -24,18 +24,20 @@
             color:#ffffff;
         }        
     }
-}
-
-//===== write_post =====//
-.page_border{
+    
+    //===== write_post =====//
     textarea{
         height: 400px;
         resize: none;
     }
+    
+    //===== detail_post =====//    
+    .panel-content{
+        color: #000000;
+        min-height: 400px;
+    }
+    
 }
-
-
-
 // .list_container{
 //     background-color : white;   
 //     padding: 10px;    

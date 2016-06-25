@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'home#index'
   get 'home/index'
   get 'home/write_post'
+  get 'home/post/:id' => 'home#detail_post'
   post 'home/write'
 
   # The priority is based upon order of creation: first created -> highest priority.

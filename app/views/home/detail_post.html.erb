@@ -1,0 +1,8 @@
+<div class="container page_border"> 
+    <div class="panel panel-default">
+      <div class="panel-heading"><%= @post.title %></div>
+      <div class="panel-body panel-content">
+          <%= @post.content.gsub(/\r\n/, '<br/>').html_safe %>
+      </div>
+    </div>
+</div>
